@@ -10,6 +10,7 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
 
 const products = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -107,12 +108,15 @@ const Header = () => {
             </Transition>
           </Popover>
 
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
             Features
-          </a>
-          <a href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
             Marketplace
-          </a>
+          </Link>
+          <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
+            About
+          </Link>
 
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
