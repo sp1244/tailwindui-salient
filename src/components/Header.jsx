@@ -24,14 +24,14 @@ const callsToAction = [
   { name: 'Contact sales', href: '#', icon: PhoneIcon },
 ]
 const company = [
-  { name: 'About us', href: '#', description: 'Learn more about our company values and mission to empower others' },
-  { name: 'Careers', href: '#', description: 'Looking for you next career opportunity? See all of our open positions' },
+  { name: 'About', href: 'about', description: 'Learn more about our company values and mission to empower others' },
+  { name: 'Careers', href: '/', description: 'Looking for you next career opportunity? See all of our open positions' },
   {
     name: 'Support',
-    href: '#',
+    href: '/',
     description: 'Get in touch with our dedicated support team or reach out on our community forums',
   },
-  { name: 'Blog', href: '#', description: 'Read our latest announcements and get perspectives from our team' },
+  { name: 'Blog', href: 'blog', description: 'Read our latest announcements and get perspectives from our team' },
 ]
 
 const Header = () => {
@@ -117,7 +117,9 @@ const Header = () => {
           <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900">
             About
           </Link>
-
+          <Link href="/blog" className="text-sm font-semibold leading-6 text-gray-900">
+            Blog
+          </Link>
           <Popover className="relative">
             <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
               Company
@@ -136,10 +138,10 @@ const Header = () => {
               <Popover.Panel className="absolute -left-8 top-full z-10 mt-3 w-96 rounded-3xl bg-white p-4 shadow-lg ring-1 ring-gray-900/5">
                 {company.map((item) => (
                   <div key={item.name} className="relative rounded-lg p-4 hover:bg-gray-50">
-                    <a href={item.href} className="block text-sm font-semibold leading-6 text-gray-900">
+                    <Link href={item.href} className="block text-sm font-semibold leading-6 text-gray-900">
                       {item.name}
                       <span className="absolute inset-0" />
-                    </a>
+                    </Link>
                     <p className="mt-1 text-sm leading-6 text-gray-600">{item.description}</p>
                   </div>
                 ))}
