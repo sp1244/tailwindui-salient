@@ -108,7 +108,7 @@ const Header = () => {
             </Transition>
           </Popover>
 
-          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/features" className="text-sm font-semibold leading-6 text-gray-900">
             Features
           </Link>
           <Link href="/marketplace" className="text-sm font-semibold leading-6 text-gray-900">
